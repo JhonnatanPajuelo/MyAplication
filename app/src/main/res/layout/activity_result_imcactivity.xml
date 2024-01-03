@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="20dp"
+
+    tools:context=".imcCalculator.ResultIMCActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <TextView
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Tu resultado fue el siguiente : "
+            android:textColor="@color/title_text"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv1"
+         />
+
+    <TextView
+        android:id="@+id/tvSugerencia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Tu IMC pertenece al rango de Peso insuficiente"
+        app:layout_constraintTop_toBottomOf="@+id/tvIMC"
+
+          />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardInfo"
+        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/background_app"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSugerencia"
+
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Según la Organización Mundial de la Salud (OMS), los valores del IMC se clasifican de la siguiente manera:"
+                android:textColor="@color/title_text"
+
+                />
+            <TextView
+                android:paddingStart="25dp"
+                android:paddingTop="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/background_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="• Menos de 18,5: Peso insuficiente"
+                android:textColor="@color/title_text"
+
+                />
+            <TextView
+                android:paddingStart="25dp"
+                android:paddingTop="20dp"
+                android:background="@color/background_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="• De 18,5 a 24,9: Peso normal"
+                android:textColor="@color/title_text"
+
+                /><TextView
+            android:paddingStart="25dp"
+            android:paddingTop="20dp"
+            android:background="@color/background_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="• De 25 a 29,9: Sobrepeso"
+            android:textColor="@color/title_text"
+
+            />
+            <TextView
+                android:paddingStart="25dp"
+                android:paddingTop="20dp"
+                android:background="@color/background_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="• De 30 a 34,9: Obesidad grado I"
+                android:textColor="@color/title_text"
+
+                />
+            <TextView
+                android:paddingStart="25dp"
+                android:paddingTop="20dp"
+                android:background="@color/background_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="• De 35 a 39,9:  Obesidad grado II"
+                android:textColor="@color/title_text"
+
+                />
+
+            <TextView
+                android:paddingStart="25dp"
+                android:paddingTop="20dp"
+                android:background="@color/background_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="• De 40 o más: Obesidad grado III"
+                android:textColor="@color/title_text"
+                android:paddingBottom="10dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btnVuelveCalcular"
+        android:padding="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardInfo"
+        android:text="Vuelvea a calcular"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
+        android:backgroundTint="@color/background_fab"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="10dp"
+    android:background="@color/background_app"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="My aplications"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <Button
+        android:id="@+id/btnSaludApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SALUDAPP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnIMCApp"
+
+
+         />
+
+    <Button
+        android:id="@+id/btnIMCApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="IMC APP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSaludApp"
+        app:layout_constraintBottom_toTopOf="@id/BtnListApp"
+
+         />
+    <Button
+        android:id="@+id/BtnListApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ListApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIMCApp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
